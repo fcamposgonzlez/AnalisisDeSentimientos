@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b16e5c223cf71fd1e1ee72bc43a8ac9329bce138ca3f9912163f54a6a557a0de
+
+name:           AnalisisDeSentimientos
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/fcamposgonzlez/AnalisisDeSentimientos#readme>
+homepage:       https://github.com/fcamposgonzlez/AnalisisDeSentimientos#readme
+bug-reports:    https://github.com/fcamposgonzlez/AnalisisDeSentimientos/issues
+author:         Fabián Campos González
+maintainer:     fcamposgonzlez@gmail.com
+copyright:      2019 Fabián Campos González
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/fcamposgonzlez/AnalisisDeSentimientos
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_AnalisisDeSentimientos
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
+
+executable AnalisisDeSentimientos-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_AnalisisDeSentimientos
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      AnalisisDeSentimientos
+    , base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
+
+test-suite AnalisisDeSentimientos-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_AnalisisDeSentimientos
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      AnalisisDeSentimientos
+    , base >=4.7 && <5
+  default-language: Haskell2010
